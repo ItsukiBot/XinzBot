@@ -355,7 +355,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
         }       
         switch(command){
             case 'prefix': case 'cekprefix':{
-                textImg(`${prefix}`)
+                textImg(`MULTI-PREFIX`)
             }
                 break
 
@@ -655,7 +655,7 @@ module.exports = async(xinz, msg, blocked, baterai, _afk, welcome, left) => {
                 break
             case prefix+'tinyurl':
                 if (isLimit(sender, isPremium, isOwner, limitCount, limit)) return reply (`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-                if (args.length < 2) return reply(`Penggunaan :\n*${prefix}tinyurl link`)
+                if (args.length < 2) return reply(`Penggunaan :\n*${prefix}tinyurl youtuebc.om :v`)
                 if (!isUrl(args[1])) return reply(`Masukkan link yang benar`)
                 axios.get(`https://tinyurl.com/api-create.php?url=${args[1]}`)
                 .then((a) => reply(`Nih ${a.data}`))
